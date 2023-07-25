@@ -40,7 +40,7 @@ typedef struct parameters
 	unsigned int width;
 	unsigned int precision;
 	unsigned int h_modifier: 1;
-	unsigned int 1_modifier: 1;
+	unsigned int l_modifier: 1;
 
 } params_t;
 
@@ -68,8 +68,8 @@ int print_s(va_list ap, params_t *params);
 
 /* number.c module */
 char *convert(long int num, int base, int flags, params);
-int print_insigned(va_list ap, params_t *params);
-int print_adress(va_list ap, params_t *params);
+int print_unsigned(va_list ap, params_t *params);
+int print_address(va_list ap, params_t *params);
 
 /* specifier.c module */
 int (*get_specifier(char *s))(va_list ap, params_t *params);
