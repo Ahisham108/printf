@@ -12,8 +12,8 @@
 
 #define NULL_STRING "(null)"
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-#define CONVERT_LOWERCASE  1
-#define CONVERT_UNSIGNED   2
+#define CONVERT_LOWERCASE 1
+#define CONVERT_UNSIGNED  2
 
 /**
  * struct parameters - PARAMETERS STRUCT
@@ -67,7 +67,7 @@ int print_percent(va_list ap, params_t *params);
 int print_s(va_list ap, params_t *params);
 
 /* number.c module */
-char *convert(long int num, int base, int flags, params);
+char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
@@ -103,6 +103,6 @@ void init_params(params_t *params, va_list ap);
 char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _printf.c module */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 
 #endif
